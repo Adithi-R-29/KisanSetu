@@ -1,0 +1,210 @@
+:root{
+  --bg:#f6f8f5;
+  --panel:#ffffff;
+  --muted:#657070;
+  --primary-1:#2b8a5f;
+  --primary-2:#65c37d;
+  --accent:#8bd3c7;
+  --card-shadow: 0 8px 24px rgba(16, 24, 32, 0.08);
+  --radius:14px;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html,body{
+  height:100%;
+}
+
+body{
+    font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+    background: url('https://www.agrivi.com/wp-content/uploads/2014/05/Blog-How-to-be-a-Farmer.png') center/cover fixed;
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    padding: 2rem;
+    color: #f6f8f5;
+}
+
+/* DARK OVERLAY */
+body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.5);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* MAKE CONTENT CLICKABLE */
+body > *{
+    position: relative;
+    z-index: 1;
+}
+
+/* HIDDEN CLASS FIX */
+.hidden{
+  display: none !important;
+}
+
+/* NAVIGATION */
+
+.nav{
+  background: #f3efe0;
+  padding: 12px 18px;
+  width: 1150px;
+  margin: auto;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(16,24,32,0.12);
+  color: #0f3e33;
+}
+
+.nav-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* MAIN APP */
+
+.app{
+  max-width:1100px;
+  margin:22px auto;
+  display:grid;
+  grid-template-columns:1fr 420px;
+  gap:20px;
+}
+
+.panel{
+  position:relative;
+}
+
+/* CARD */
+
+.card{
+  background:white;
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:var(--card-shadow);
+  color:#0f3430;
+}
+
+/* UPLOAD ZONE */
+
+.upload-zone{
+  border:2px dashed rgba(16,24,32,0.2);
+  border-radius:12px;
+  padding:18px;
+  min-height:160px;
+  cursor:pointer;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.upload-zone input[type="file"]{
+  display:none;
+}
+
+.upload-inner{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+}
+
+/* BUTTONS */
+
+.btn{
+  padding:10px 14px;
+  border-radius:10px;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.btn.gradient{
+  background:linear-gradient(90deg,var(--primary-1),var(--primary-2));
+  color:white;
+}
+
+.btn.big{
+  padding:14px 22px;
+  font-size:16px;
+}
+
+/* PREVIEW */
+
+.preview{
+  margin-top:10px;
+}
+
+.preview img{
+  max-width:220px;
+  border-radius:8px;
+}
+
+/* FORM */
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:10px;
+}
+
+.form-field input{
+  width:100%;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+
+/* RESULTS */
+
+.result-card{
+  margin-bottom:15px;
+}
+
+.severity{
+  padding:6px 10px;
+  border-radius:20px;
+  color:white;
+  display:inline-block;
+}
+
+.severity.low{
+  background:green;
+}
+
+.severity.medium{
+  background:orange;
+}
+
+.severity.high{
+  background:red;
+}
+
+.confidence-bar{
+  height:12px;
+  background:#eee;
+  border-radius:10px;
+}
+
+.confidence-fill{
+  height:100%;
+  background:green;
+  width:0%;
+}
+
+/* FOOTER */
+
+.footer{
+  text-align:center;
+  margin-top:20px;
+  background:#f3efe0;
+  padding:10px;
+  border-radius:10px;
+  color:#333;
+}
